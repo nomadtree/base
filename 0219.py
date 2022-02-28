@@ -155,4 +155,159 @@
 # print(plus(5))
 
 
+# set(집합) 중복이 불가, 순서가 없음
+# m = {1, 3, 4, 5, 4, 5}
+# print(m) 
 
+# cl1 = {'nomad', 'wind', 'tree', 'fog'}
+# cl2 = {'wind', 'sunny', 'blezze', 'fog', 'nomad'}
+# print(cl1 & cl2) # 교집합
+# print(cl1 | cl2) # 합집합
+# print(cl1 - cl2) # 차집합
+# cl1.add('stone')
+# print(cl1)
+# cl1.remove('nomad')
+# print(cl1)
+
+# 자료구조 변경
+# menu = {'tea','moca', 'latte', 'juice'} # 세트
+# print(menu)
+# print(menu, type(menu)) # 세트
+
+# menu = list(menu)
+# print(menu, type(menu)) # 세트가 리스트로 변환
+
+# menu = tuple(menu)
+# print(menu, type(menu)) # 세트가 튜플로 변환
+
+# menu = set(menu)
+# print(menu, type(menu)) # 세트로 변환
+
+from random import *
+from traceback import print_tb
+users = range(1, 21) # 1부터 20까지 숫자를 생성
+# print(type(users)) #  데이터 타입이 레인지
+users = list(users) # 데이터 타입을 리스트로 변환
+# print(type(users))
+# print(users)
+# shuffle(users)
+# print(users)
+
+# winners = sample(users, 4) # 4명중에서 1명은 김치, 3명은 당근
+
+# print('------승리자------')
+# print('김치 당첨자 : {0}'.format(winners[0]))
+# print('당근 당첨자 : {0}'.format(winners[1:]))
+
+# 조건문
+# weather = 'rainny'
+# if weather == 'rainny':
+#     print('you need raincoat')
+
+# weather = 'sunny'
+# if weather == 'rainny':
+#     print('you need umblera')
+
+# weather = 'mist'
+# if weather == 'rainny':
+#     print('you need umblera')
+# elif weather == 'mist':
+#     print('you wear a mask')
+
+# weather = 'good'
+# if weather == 'rainny':
+#     print('you need umblera')
+# elif weather == 'mist':
+#     print('you wear a mask')
+# else :
+#     print('today is fine!!!')
+
+# weather = input('how about weather ? :')
+# if weather == 'rainny':
+#     print('you need umblera')
+# elif weather == 'mist':
+#     print('you wear a mask')
+# else :
+#     print('today is fine!!!')
+
+# weather = input('how about weather ? :')
+# if weather == 'rainny' or weather == 'snow':
+#     print('you need umblera')
+# elif weather == 'mist':
+#     print('you wear a mask')
+# else :
+#     print('today is fine!!!')
+
+# temp = int(input('how is temperature? :'))
+# if 30 <= temp:
+#     print ('so hot!!')
+# elif 25 <= temp and temp < 30:
+#     print('so fine')
+
+# temp = int(input('how is temperature? :'))
+# if 30 <= temp:
+#     print ('so hot!!')
+# elif 25 <= temp and temp < 30:
+#     print('so fine')
+# elif 0 <= temp and temp < 10:
+#     print('cold')
+
+# temp = int(input('how is temperature? :'))
+# if 30 <= temp:
+#     print ('so hot!!')
+# elif 25 <= temp and temp < 30:
+#     print('so fine')
+# elif 0 <= temp < 10:
+#     print('cold')
+# else:
+#     print('so cold')
+
+# 반복문
+
+# print('waiting no : 1')
+# print('waiting no : 2')
+# print('waiting no : 3')
+# print('waiting no : 4')
+# print('waiting no : 5')
+
+# for waiting_no in [0, 1, 2, 3, 4]:
+#     print('waiting no : {0}'.format(waiting_no))
+
+# for waiting_no in range(5):
+#     print('waiting no : {0}'.format(waiting_no))
+
+# for waiting_no in range(1,6): # 1, 2, 3, 4, 5
+#     print('waiting no : {0}'.format(waiting_no))
+
+# cl_1 = ['nomad', 'stone', 'tree', 'flower']
+# for element in cl_1:
+#     print('{0}, all is nature'.format(element))
+
+# while문
+# call = 'nomad'
+# index = 5
+# while index >= 1:
+#     print("{0}, 출석을 부릅니다. {1} 번 남았습니다.".format(call, index))
+#     index -=1
+
+# call = 'nomad'
+# index = 5
+# while index >= 1:
+#     print("{0}, 출석을 부릅니다. {1} 번 남았습니다.".format(call, index))
+#     index -=1
+#     if index == 0:
+#         print('결석입니다.')
+
+# 무한루프에 빠진 경우, 빠져나오기 컨트롤 + C
+# call = 'nomad'
+# index = 1
+# while True:
+#     print("{0}, 출석을 부릅니다. {1} 번 남았습니다.".format(call, index))
+#     index += 1
+
+# 조건이 맞으면 while문을 탈출    
+# call = 'nomad'
+# customer = 'unknown'
+# while customer != call:
+#     print("{0}, 출석을 부릅니다.".format(call))
+#     customer = input('what is name?:')
